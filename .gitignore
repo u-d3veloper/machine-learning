@@ -1,0 +1,8 @@
+# 1. On ignore TOUT par défaut
+/*
+
+# 2. On ne doit pas ignorer le fichier gitignore lui-même et le README
+!/.gitignore
+!/README.md
+
+# 3. On autorise (liste blanche) les projets spécifiques à publier
