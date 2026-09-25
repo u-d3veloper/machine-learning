@@ -1,0 +1,6 @@
+name = "Digit recognition"
+summary = "MNIST digits two ways: a neural network written from scratch in NumPy (94%) and a PyTorch CNN (about 99%), with a drawing demo."
+category = "deep-learning"
+status = "wip"  # wip | stable
+version = "0.1.0"
+stack = ["NumPy", "PyTorch", "Streamlit"]

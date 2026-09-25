@@ -1,0 +1,4 @@
+-r requirements.txt
+opencv-python-headless>=4.12
+streamlit==1.51.0
+streamlit-drawable-canvas==0.9.3

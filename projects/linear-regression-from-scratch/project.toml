@@ -1,0 +1,6 @@
+name = "Linear regression from scratch"
+summary = "Batch gradient descent in plain NumPy, verified against the closed-form solution on single and multivariate fits."
+category = "classical-ml"
+status = "stable"  # wip | stable
+version = "0.1.0"
+stack = ["NumPy", "Matplotlib"]

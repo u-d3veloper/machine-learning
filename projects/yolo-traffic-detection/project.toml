@@ -1,0 +1,6 @@
+name = "YOLO traffic detection"
+summary = "Real-time detection of cars, people and traffic lights on a YouTube live stream with YOLO11."
+category = "computer-vision"
+status = "wip"  # wip | stable
+version = "0.1.0"
+stack = ["YOLO11", "OpenCV", "VidGear"]

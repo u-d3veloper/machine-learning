@@ -1,8 +1,86 @@
-# 1. On ignore TOUT par défaut
+# =============================================================================
+# Whitelist policy: everything at the repo root is PRIVATE by default.
+# Only the paths re-included below can ever be committed, so old course
+# folders, datasets, installers and virtualenvs stay local and invisible.
+# Private notes can live in _private/ or in any other root folder.
+# =============================================================================
 /*
 
-# 2. On ne doit pas ignorer le fichier gitignore lui-même et le README
+# --- Public zone -------------------------------------------------------------
 !/.gitignore
+!/.github/
+!/.pre-commit-config.yaml
+!/LICENSE
+!/Makefile
 !/README.md
+!/ROADMAP.md
+!/docs/
+!/projects/
 
-# 3. On autorise (liste blanche) les projets spécifiques à publier
+!/pyproject.toml
+!/scripts/
+!/templates/
+
+# --- Inside projects/ --------------------------------------------------------
+# A project folder starting with "_" is a hidden draft and is never published.
+/projects/_*/
+
+# Private files or folders kept inside a published project.
+.local/
+*.local
+*.local.*
+
+*/MNIST/*
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Datasets: download them from a script. Only data/sample/ may be committed.
+**/data/*
+!**/data/sample/
+!**/data/README.md
+
+# Model weights and experiment outputs (too big for git).
+# A small one can still be forced with `git add -f`.
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.h5
+*.keras
+*.pkl
+*.pickle
+*.joblib
+*.gguf
+checkpoints/
+mlruns/
+runs/
+wandb/
+lightning_logs/
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+
+# Python
+__pycache__/
+*.py[cod]
+.venv*/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# OS and editors
+.DS_Store
+.idea/
+.vscode/

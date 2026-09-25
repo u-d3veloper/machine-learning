@@ -1,0 +1,6 @@
+name = "Iris classification"
+summary = "Spot-check five classifiers with stratified cross-validation, then evaluate the best one on held-out data."
+category = "classical-ml"
+status = "stable"  # wip | stable
+version = "0.1.0"
+stack = ["scikit-learn", "pandas", "Matplotlib"]

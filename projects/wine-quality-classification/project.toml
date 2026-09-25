@@ -1,0 +1,6 @@
+name = "Wine quality classification"
+summary = "Imbalanced binary classification (14% good wines): why accuracy misleads and how class weighting trades precision for recall."
+category = "classical-ml"
+status = "stable"  # wip | stable
+version = "0.1.0"
+stack = ["scikit-learn", "pandas", "Matplotlib"]

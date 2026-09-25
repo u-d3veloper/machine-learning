@@ -1,0 +1,4 @@
+ultralytics>=8.3
+opencv-python>=4.12
+vidgear[core]>=0.3.4
+yt-dlp
